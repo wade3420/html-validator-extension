@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "HTML Validator Extension",
+  "version": "1.0.0",
+  "description": "로컬호스트 HTML 검사기",
+  "permissions": [
+    "http://localhost/*"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "http://localhost/*"
+  ]
+} 

@@ -4,15 +4,34 @@
   "version": "1.0.0",
   "description": "로컬호스트 HTML 검사기",
   "permissions": [
+    "activeTab",
+    "sidePanel",
+    "tabs",
+    "scripting",
     "http://localhost/*"
   ],
+
   "action": {
-    "default_popup": "index.html"
+    "default_title": "Click to open panel"
   },
   "background": {
     "service_worker": "background.js"
   },
+  "side_panel": {
+    "default_path": "index.html"
+  },
   "host_permissions": [
     "http://localhost/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.html",
+        "static/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ]
 } 

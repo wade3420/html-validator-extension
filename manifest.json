@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "HTML Validator",
+  "version": "1.0",
+  "description": "HTML 문서의 유효성을 검사하는 도구",
+  "icons": {
+    "16": "favicon.svg",
+    "48": "favicon.svg",
+    "128": "favicon.svg"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "favicon.svg",
+      "48": "favicon.svg",
+      "128": "favicon.svg"
+    }
+  }
+}

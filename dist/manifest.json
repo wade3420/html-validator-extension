@@ -2,6 +2,11 @@
   "manifest_version": 3,
   "name": "HTML Validator Extension",
   "version": "1.0.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "description": "로컬호스트 HTML 검사기",
   "permissions": [
     "activeTab",
@@ -10,7 +15,6 @@
     "scripting",
     "http://localhost/*"
   ],
-
   "action": {
     "default_title": "Click to open panel"
   },
@@ -34,4 +38,4 @@
       ]
     }
   ]
-} 
+}

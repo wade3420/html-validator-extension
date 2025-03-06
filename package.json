@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build && cp public/manifest.json public/background.js dist/",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -24,6 +26,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.4",
     "@types/node-fetch": "^2.6.12",
@@ -35,11 +40,13 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "jsdom": "^26.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "3.4.17",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.1.1"
+    "vite": "^6.1.1",
+    "vitest": "^3.0.7"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -13,7 +13,7 @@ This project is a Chrome extension that validates HTML content of the active tab
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/html-validator-extension.git
+   git clone https://github.com/wade3420/html-validator-extension
    cd html-validator-extension
    ```
 

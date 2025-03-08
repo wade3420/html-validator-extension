@@ -23,7 +23,6 @@
     "default_path": "index.html"
   },
   "host_permissions": [
-    "https://*",
     "http://localhost/*"
   ],
   "web_accessible_resources": [

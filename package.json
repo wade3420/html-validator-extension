@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp public/manifest.json public/background.js dist/",
+    "build": "tsc && vite build && cp public/manifest.json dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",

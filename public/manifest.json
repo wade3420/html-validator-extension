@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "HTML Validator Extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
@@ -9,22 +9,21 @@
   },
   "description": "로컬호스트 HTML 검사기",
   "permissions": [
-    "activeTab",
     "sidePanel",
     "tabs",
-    "scripting",
-    "http://localhost/*"
+    "scripting"
   ],
   "action": {
     "default_title": "Click to open panel"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "assets/background.js"
   },
   "side_panel": {
     "default_path": "index.html"
   },
   "host_permissions": [
+    "https://*",
     "http://localhost/*"
   ],
   "web_accessible_resources": [

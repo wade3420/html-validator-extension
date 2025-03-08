@@ -1,10 +1,21 @@
 import type { ChromeMessage, ValidationResponse } from '../src/types';
 
-export const setupMessageListener = () => {
+const setupMessageListener = () => {
   chrome.runtime.onMessage.addListener(
     (request: ChromeMessage, _sender, sendResponse) => {
       if (request.type === 'FETCH_HTML') {
-        fetch(request.url!)
+        const fetchOption = {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+            'Access-Control-Allow-Headers':
+              'Content-Type, Authorization, Content-Length, X-Requested-With',
+          },
+        };
+
+        fetch(request.url!, fetchOption)
           .then((response) => response.text())
           .then((html) => {
             return fetch('https://validator.w3.org/nu/?out=json', {

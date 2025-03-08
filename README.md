@@ -1,50 +1,91 @@
-# React + TypeScript + Vite
+# HTML Validator Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Chrome extension that validates HTML content of the active tab and categorizes validation messages into errors, warnings, and informational messages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches HTML content from the active tab.
+- Validates HTML and displays categorized messages.
+- Provides a summary of total errors, warnings, and informational messages.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
 
-- Configure the top-level `parserOptions` property like this:
+   ```bash
+   git clone https://github.com/yourusername/html-validator-extension.git
+   cd html-validator-extension
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+2. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+3. Build the project:
+
+   ```bash
+   yarn run build
+   ```
+
+4. Load the extension in Chrome:
+
+   - Open Chrome and navigate to `chrome://extensions/`.
+   - Enable "Developer mode" in the top right corner.
+   - Click "Load unpacked" and select the `dist` directory from this project.
+
+## Usage
+
+1. Click the extension icon in the Chrome toolbar.
+2. Click the "검사" button to validate the HTML of the current active tab.
+3. View the validation results categorized as errors, warnings, and informational messages.
+
+## Development
+
+To start the development server, run:
+
+```bash
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This will watch for changes and automatically rebuild the project.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Testing
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+To run the unit tests, use:
+
+```bash
+yarn test
 ```
+
+To run tests with coverage, use:
+
+```bash
+yarn test:coverage
+```
+
+## Linting
+
+To lint the project, run:
+
+```bash
+yarn lint
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push to your fork.
+4. Create a pull request with a description of your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please contact [your-email@example.com](mailto:your-email@example.com).

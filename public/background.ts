@@ -6,13 +6,6 @@ const setupMessageListener = () => {
       if (request.type === 'FETCH_HTML') {
         const fetchOption = {
           method: 'GET',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-            'Access-Control-Allow-Headers':
-              'Content-Type, Authorization, Content-Length, X-Requested-With',
-          },
         };
 
         fetch(request.url!, fetchOption)
